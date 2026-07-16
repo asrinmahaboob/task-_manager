@@ -44,7 +44,7 @@ class Task(db.Model):
 # ---------------------------------------------------------
 def login_required(f):
     @wraps(f)
-    def decorated_function(*args, **kwargs):
+    def decorated_function(*args, **kwargs1234):
         if 'user_id' not in session:
             flash('Please log in to continue.', 'warning')
             return redirect(url_for('login'))
